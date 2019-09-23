@@ -1,3 +1,205 @@
+<!--
+  ~ Copyright 2018 Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <resources>
-    <string name="app_name">Si Pelit Motion</string>
+
+    <!-- Resources that do not require translation -->
+    <string name="app_name" translatable="false">Si Pelit Motion</string>
+    <string name="navigation_drawer_header_title" translatable="false">Sunflower</string>
+
+    <!-- FONT -->
+    <string name="font_poppins_regular">fonts/Poppins-Regular.ttf</string>
+    <string name="font_poppins_bold">fonts/Poppins-Bold.ttf</string>
+    <string name="font_poppins_semi_bold">fonts/Poppins-SemiBold.ttf</string>
+    <string name="font_poppins_medium">fonts/Poppins-Medium.ttf</string>
+    <string name="font_poppins_light">fonts/Poppins-Light.ttf</string>
+    <string name="font_forced_square">fonts/forced_square.ttf</string>
+
+    <string name="error_no_connection">Error, jaringan koneksi</string>
+    <string name="retry">Ulangi</string>
+    <string name="no_apparel_yet">Tidak ada barang</string>
+    <string name="create_apparel">Buat data barang toko anda</string>
+    <string name="create_new">Buat</string>
+
+    <string name="add_cover">Add Cover</string>
+    <string name="cover">Cover</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="disc">Disc</string>
+    <string name="stock">Stock</string>
+    <string name="pcs">Pcs</string>
+    <string name="add_folder">Add Folder</string>
+
+    <!--NAME-->
+    <string name="kios_empty_photo">Gambar photo product tidak boleh kosong</string>
+    <string name="kios_empty_shop">Toko belum dipilih atau dibuat</string>
+    <string name="kios_empty_name">Nama product tidak boleh kosong</string>
+    <string name="kios_empty_stock">Stock product tidak boleh kosong</string>
+    <string name="kios_empty_description">Deskripsi product tidak boleh kosong</string>
+    <string name="kios_empty_price">Harga product tidak boleh kosong</string>
+    <string name="succes_add_product_kios">Berhasil menambahkan product</string>
+    <string name="succes_add_shop_kios">Berhasil membuat toko</string>
+    <string name="succes_add_chart">Berhasil menbambahkan ke keranjang</string>
+    <string name="succes_checkout_product">Berhasil order product</string>
+    <string name="total">Total</string>
+    <string name="order">Order</string>
+    <string name="payment">Payment</string>
+    <string name="shop_name">Shop name</string>
+    <string name="create">Create</string>
+    <string name="price_tag">Price Tag</string>
+    <string name="idr">IDR</string>
+    <string name="camera">Camera</string>
+    <string name="storage">Storage</string>
+
+
+    <!--LOGIN REGISTER-->
+    <string name="login">Login</string>
+    <!--<string name="register">Register</string>-->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgot">Forgot Password</string>
+    <string name="signin">sign in</string>
+    <string name="signup">sign in</string>
+    <string name="new_text">you new?</string>
+    <string name="fullname">Fullname</string>
+    <string name="addreas">Email Addreas</string>
+    <string name="join">Join Now</string>
+    <string name="already">i already use remap,</string>
+    <string name="facebook_app_id">283666898713960</string>
+    <string name="username_email_empty">Username/email tidak boleh kosong</string>
+    <string name="username_space">Username tidak boleh ada spasi</string>
+    <string name="password_empty">Password tidak boleh kosong</string>
+    <string name="password_minimal">Panjang password minimal 6 karakter</string>
+    <string name="all_permissions_denied_feedback">All those permissions are needed for doing some magic</string>
+    <string name="permission_rationale_settings_button_text">SETTINGS</string>
+    <string name="username_empty">Username tidak boleh kosong</string>
+    <string name="username_minimal">Panjang username karakter minimal 6</string>
+    <string name="username_maximal">Panjang username karakter maksimal 32</string>
+    <string name="complate_name_empty">Nama lengkap tidak boleh kosong</string>
+    <string name="complate_name_maximal">Nama lengkap maksimal 32</string>
+    <string name="email_not_valid">Email tidak valid</string>
+    <string name="email_maximal">Email maksimal 32</string>
+    <string name="email_empty">Email tidak boleh kosong</string>
+
+    <!-- FORGOT -->
+    <string name="ubah_password">Ubah Password</string>
+    <string name="title_1">Cool card</string>
+    <string name="title_2">Ok card</string>
+    <string name="title_3">Bad card</string>
+    <string name="title_4">Ugly card</string>
+    <string name="action_report">Report Bug</string>
+    <string name="action_privacy_policy">ToS &amp; Privacy Policy</string>
+    <string name="Tulis_lap">Laporkan Bug</string>
+    <string name="lapor">Report</string>
+    <string name="bekas">History</string>
+    <string name="cancel">Cancel</string>
+    <string name="header">Forgot Password</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Masukkan email</string>
+    <string name="kode_aktivasi">Kode Aktivasi</string>
+    <string name="enter_kode_aktivasi">Masukkan kode aktivasi</string>
+    <string name="tidak_terkirim">Tidak terkirim?</string>
+    <string name="kirim_ulang">Kirim Ulang</string>
+    <string name="enter_new_pass">Masukkan password baru</string>
+    <string name="new_pass_again">Ulangi Password Baru</string>
+    <string name="kirim">Kirim</string>
+
+    <!--AUTHENTICATION-->
+    <string name="error_server">Maaf, ada kesalahan diserver!</string>
+
+    <!--BASE-->
+    <string name="loading">Loading...</string>
+    <string name="error_server_time_out">Request Time out. Silahkan coba lagi.</string>
+    <string name="error_server_failed">Gagal menyambungkan</string>
+    <string name="default_notification_channel_id" translatable="false">remap_channel</string>
+    <string name="default_notification_channel_name" translatable="true">Remap</string>
+
+    <!--LOCATION-->
+    <string name="title_location_permission">Permintaan izin lokasi</string>
+    <string name="text_location_permission">Dengan mengirimkan lokasi anda akan dapat menggunakan semua fitur Remap</string>
+
+    <!--SOCIAL-->
+    <string name="server_client_id">557281845896-pvibqjp562p62drpii7lmf9msrfmqs5n.apps.googleusercontent.com</string>
+
+    <!--PERMISSION-->
+    <string name="permission_denied_feedback">DENIED</string>
+    <string name="permission_permanently_denied_feedback">PERMANENTLY DENIED</string>
+    <string name="permission_rationale_title">We need this permission</string>
+    <string name="permission_rationale_message">This permission is needed for doing some fancy stuff so please, allow it!</string>
+
+    <!--FORM-->
+    <string name="email_hint">masukkan email anda</string>
+    <string name="kode_hint">masukkan kode aktivasi</string>
+    <string name="title_new">Password Baru</string>
+    <string name="repeat_pass">ulangi password baru</string>
+    <string name="title_repeat">Ulangi Password Baru</string>
+    <string name="resend">Kirim Ulang</string>
+    <string name="not_send">Tidak terkirim?</string>
+    <string name="title_kode">Kode Aktivasi</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="kind">Kind (Hijab, Khimar, dll)</string>
+    <string name="description_optional">Description (Optional)</string>
+    <string name="upload_gambar_optional">Upload Image (Optional)</string>
+
+    <!-- ERROR VALIDATION -->
+    <string name="empty_name">Product name must be filled</string>
+    <string name="empty_price">Product price must be filled</string>
+    <string name="empty_stock">Product stock must be filled</string>
+    <string name="empty_kind">Product kind must be filled</string>
+    <string name="empty_order">Pesanan masih kosong!!</string>
+
+
+    <!-- SUCCESS MESSAFE -->
+    <string name="success_add_product">Success add product!</string>
+
+    <!-- DETAIL PRODUCT -->
+    <string name="add_nfc">Add NFC</string>
+    <string name="add_barcode">Add Barcode</string>
+    <string name="edit_nfc">Edit NFC</string>
+    <string name="edit_barcode">Edit Barcode</string>
+
+    <!-- PAY -->
+    <string name="pay">Pay</string>
+    <string name="edit">Edit</string>
+    <string name="succes_edit_product">Success edit product</string>
+    <string name="succes_add_stock">Berhasil tambah stok</string>
+
+    <string name="new_pass">Password Baru</string>
+
+    <string name="save">Simpan</string>
+
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+
+    <string name="onboardingWelcomeContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+    <string name="onboardingSpinWinContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+    <string name="onboardingRecommenderContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+    <string name="onboarding_welcome_3">Welcome 3</string>
+    <string name="onboarding_welcome_2">Welcome 2</string>
+    <string name="onboarding_welcome_1">Welcome</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="text_hint"><b>Search...</b></string>
+
+    <string name="title_activity_profile">Profile</string>
+    <string name="action_settings">Settings</string>
 </resources>

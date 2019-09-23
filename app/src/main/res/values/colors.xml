@@ -1,6 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2018 Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#1F5BF3</color>
+    <color name="colorPrimaryDark">#0947E8</color>
+    <color name="colorAccent">#00A5FF</color>
+
+    <!--colors for modern ui-->
+    <color name="whiteTextColor">#fff</color>
+    <color name="blackTextColor">#000</color>
+
+    <color name="whiteCardColor">#fff</color>
+
+    <color name="darkModeBackground">#353567</color>
+    <color name="darkModeTextColor">#fff</color>>
+
+    <color name="primaryTextColor">#2661FA</color>
+    <color name="loginBkColor">#f0f0f0</color>
+
+    <color name="grass_dark">#A2CF6A</color>
+    <color name="grass_light">#8DC14D</color>
+    <color name="mint_dark">#5AC2A9</color>
+    <color name="mint_light">#2AB999</color>
+    <color name="sunflower_light">#FECE56</color>
+    <color name="sunflower_dark">#F5BB41</color>
+    <color name="general_bg">#DCDDE1</color>
+    <color name="general_btn">#F5BB41</color>
+    <color name="general_stroke">#DFDFDF</color>
+    <color name="darkest_text">#444444</color>
+    <color name="darkest_medium_text">#666666</color>
+    <color name="darkest_light_text">#999999</color>
+    <color name="aqua_dark">#2FAEDA</color>
+    <color name="aqua_light">#4DC2EB</color>
+    <color name="new_bg">#F5F6Fa</color>
+    <color name="blue_kios">#5487c4</color>
+    <color name="background">#f1f1f3</color>
+    <color name="colorText">#656565</color>
+    <color name="text_lr">#616161</color>
+    <color name="colorGold">#CC9900</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <!--POS MAIN COLOR-->
+    <color name="pos_background_primary">#f2f2f3</color>
+    <color name="pos_background_secondary">#FFFFFF</color>
+    <color name="pos_orange_color">#F5BB41</color>
+    <color name="pos_white_color">#FFFFFF</color>
+    <color name="pos_red_color">#ee5466</color>
+
+    <color name="pos_black_color">#000000</color>
+    <color name="pos_text_active">#000000</color>
+    <color name="pos_text_inactive">#999999</color>
+    <color name="colorToolbar">#3A3C48</color>
+    <color name="colorWhite">#FFffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorHeaderCard">#cccccc</color>
+    <color name="colorBorder">#e9e8e8</color>
+    <color name="black">#000</color>
+    <color name="line">#ECECEC</color>
+    <color name="orange_500">#FF6700</color>
+
+    <color name="flat_red">#e74c3c</color>
+    <color name="tintColor">#515151</color>
+    <color name="flat_orange">#e67e22</color>
+    <color name="flat_yellow">#f1c40f</color>
+    <color name="flat_green">#b8f0d0</color>
+    <color name="flat_blue">#3498db</color>
+    <color name="colorGoldButton">#F5BB41</color>
+    <color name="colorText_name">#434343</color>
+    <color name="backgroundHeader">#ffffff</color>
+    <color name="colorBorderLight">#ffffff</color>
+    <color name="colorBorder_foto">#ffffff</color>
+
+    <color name="grapefruit_light">#EC5564</color>
+    <color name="grapefruit_dark">#DE4353</color>
+
+    <color name="background_transparant">#D0000000</color>
+    <color name="dark_get_started">#444444</color>
+    <color name="light_get_started">#DFDFDF</color>
+
+
+    <color name="bottomNavigationTintColor">#B2B2B2</color>
+    <color name="bottomNavigationSelectedColor">#FC4926</color>
+    <color name="whiteBodyColor">#FCFCFC</color>
+    <color name="darkTextColor">#020000</color>
+    <color name="frutorial_title">#000</color>
+
+    <!--colors for light mode-->
+    <color name="contentBodyColor">#FCFCFC</color>
+    <color name="contentTextColor">#020000</color>
+    <color name="bottomNavigationBackground">#F7F7F7</color>
+
+    <color name="profilePrimaryDark">#FF3B30</color>
+    <color name="profileAccentColor">#F7F7F7</color>
+    <color name="profileBackground">#fff</color>
+    <color name="profileEditTextColor">#707070</color>
 </resources>

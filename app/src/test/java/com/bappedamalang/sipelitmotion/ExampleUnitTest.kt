@@ -1,4 +1,4 @@
-package com.bappedamalang.myapplication
+package com.bappedamalang.sipelitmotion
 
 import org.junit.Test
 
