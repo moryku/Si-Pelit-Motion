@@ -35,8 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:visibility="gone"
-            android:src="@drawable/ic_shopping_cart" />
+            android:src="@drawable/ic_shopping_cart"
+            android:visibility="gone" />
 
     </RelativeLayout>
 
@@ -64,72 +64,10 @@
 
             <include layout="@layout/card_header" />
 
-            <!--replace with recycler view-->
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoryRecyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    style="@style/tagTextStyle"
-                    android:text="#pendidikan" />
-
-                <TextView
-                    style="@style/tagTextStyle"
-                    android:text="#pariwisata" />
-
-                <TextView
-                    style="@style/tagTextStyle"
-                    android:text="#transportasi" />
-
-            </LinearLayout>
-
-            <!--replace with recycler view-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp">
-
-                <TextView
-                    style="@style/tagTextStyle"
-                    android:text="#tata_kota" />
-
-                <TextView
-                    style="@style/tagTextStyle"
-                    android:text="#politik" />
-
-                <TextView
-                    style="@style/tagTextStyle"
-                    android:text="#administrasi" />
-
-                <TextView
-                    style="@style/tagTextStyle"
-                    android:text="#tik" />
-
-            </LinearLayout>
-
-            <!--replace with recycler view-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp">
-
-                <TextView
-                    style="@style/tagTextStyle"
-                    android:text="#sampah" />
-
-                <TextView
-                    style="@style/tagTextStyle"
-                    android:text="#lingkungan" />
-
-                <TextView
-                    style="@style/tagTextStyle"
-                    android:text="#energi" />
-
-                <TextView
-                    style="@style/tagTextStyle"
-                    android:text="#agribisnis" />
-
-            </LinearLayout>
+                android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -141,69 +79,19 @@
                     style="@style/viewParent.headerText"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:text="Rekomendasi" />
-
-                <TextView
-                    style="@style/viewParent"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:text="Lihat Semua"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="@dimen/headerMoreTextSize"
-                    android:textStyle="bold" />
+                    android:text="List Kajian" />
 
             </RelativeLayout>
 
-            <!--remove the below layout with recycler view, use card_product as model for design-->
-
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="8dp">
 
-                <include layout="@layout/card_product" />
-
-                <include layout="@layout/card_product" />
-
-            </LinearLayout>
+            </androidx.recyclerview.widget.RecyclerView>
 
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp">
-
-                <TextView
-                    style="@style/viewParent.headerText"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:text="Trend Kajian" />
-
-                <TextView
-                    style="@style/viewParent"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:text="Lihat Semua"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="@dimen/headerMoreTextSize"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-
-            <!--remove the below layout with recycler view, use card poplar courses as model for design-->
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
-
-                <include layout="@layout/card_trends" />
-
-                <include layout="@layout/card_trends" />
-
-            </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

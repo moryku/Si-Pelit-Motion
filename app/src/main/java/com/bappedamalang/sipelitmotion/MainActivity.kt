@@ -1,5 +1,6 @@
 package com.bappedamalang.sipelitmotion
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -20,7 +21,9 @@ import com.google.android.material.navigation.NavigationView
 import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-
+import android.text.TextUtils
+import com.bappedamalang.sipelitmotion.auth.LoginActivity
+import id.flwi.util.ActivityUtil
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -62,6 +65,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     protected override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (TextUtils.isEmpty(ActivityUtil.getSharedPreferenceString(this, TOKEN))) {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
 
         setContentView(R.layout.activity_main)
         val toolbar = findViewById(R.id.toolbar) as Toolbar

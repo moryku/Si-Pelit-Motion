@@ -17,7 +17,7 @@
 <resources>
 
     <!-- Resources that do not require translation -->
-    <string name="app_name" translatable="false">Si Pelit Motion</string>
+    <string name="app_name" translatable="false">Si Pelit e-Motion</string>
     <string name="navigation_drawer_header_title" translatable="false">Sunflower</string>
 
     <!-- FONT -->
