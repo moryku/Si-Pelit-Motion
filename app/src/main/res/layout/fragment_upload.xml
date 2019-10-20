@@ -13,141 +13,179 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        style="@style/loginHeader"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/loginViewsMargin"
-        android:text="Upload Form Kajian" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="20dp"
-        android:hint="Judul"
-        android:textSize="12sp"></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <TextView
+                style="@style/loginHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:text="Upload Form Kajian" />
 
-    <EditText
-        android:layout_marginTop="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:background="@drawable/round_corner_rectangle_grey_8dp"
-        android:gravity="top"
-        android:minLines="3"
-        android:padding="8dp"
-        android:textSize="12sp"></EditText>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="20dp"
-        android:hint="Kategory"
-        android:textSize="12sp"></TextView>
-
-    <androidx.appcompat.widget.AppCompatSpinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"></androidx.appcompat.widget.AppCompatSpinner>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="20dp"
-        android:hint="Abstrak"
-        android:textSize="12sp"></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="20dp"
+                android:hint="Judul"
+                android:textSize="12sp"></TextView>
 
 
-    <EditText
-        android:layout_marginTop="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:background="@drawable/round_corner_rectangle_grey_8dp"
-        android:gravity="top"
-        android:minLines="3"
-        android:padding="8dp"
-        android:textSize="12sp"></EditText>
+            <EditText
+                android:id="@+id/textJudul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/round_corner_rectangle_grey_8dp"
+                android:gravity="top"
+                android:minLines="2"
+                android:padding="8dp"
+                android:textSize="12sp"></EditText>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="20dp"
-        android:hint="File Dokumen"
-        android:textSize="12sp"></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="20dp"
+                android:hint="Kategory"
+                android:textSize="12sp"></TextView>
 
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"></androidx.appcompat.widget.AppCompatSpinner>
 
-    <LinearLayout
-        android:layout_marginTop="4dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:background="@drawable/round_corner_rectangle_grey_8dp"
-        android:gravity="top"
-        android:padding="4dp"
-        android:textSize="12sp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text=""></TextView>
-
-        <Button
-            android:id="@+id/buttonChooseFile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pilih">
-
-        </Button>
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="20dp"
-        android:hint="File Dokumen"
-        android:textSize="12sp"></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="20dp"
+                android:hint="Abstrak"
+                android:textSize="12sp"></TextView>
 
 
-    <LinearLayout
-        android:layout_marginTop="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:background="@drawable/round_corner_rectangle_grey_8dp"
-        android:gravity="top"
-        android:padding="4dp"
-        android:textSize="12sp">
+            <EditText
+                android:id="@+id/textAbstrak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/round_corner_rectangle_grey_8dp"
+                android:gravity="top"
+                android:minLines="3"
+                android:padding="8dp"
+                android:textSize="12sp"></EditText>
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text=""></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="20dp"
+                android:hint="Jumlah Hal"
+                android:textSize="12sp"></TextView>
 
-        <Button
-            android:id="@+id/burronChooseImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pilih">
 
-        </Button>
-    </LinearLayout>
+            <EditText
+                android:id="@+id/textJumlahHal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/round_corner_rectangle_grey_8dp"
+                android:gravity="top"
+                android:minLines="1"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:textSize="12sp"></EditText>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/cirLoginButton"
-        style="@style/loginButton"
-        android:layout_gravity="right"
-        android:layout_marginTop="@dimen/loginViewsMargin"
-        android:gravity="center"
-        android:text="Upload" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="20dp"
+                android:hint="File Dokumen"
+                android:textSize="12sp"></TextView>
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/round_corner_rectangle_grey_8dp"
+                android:gravity="top"
+                android:padding="4dp"
+                android:textSize="12sp">
+
+                <TextView
+                    android:id="@+id/textChooseFile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""></TextView>
+
+                <Button
+                    android:id="@+id/buttonChooseFile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih">
+
+                </Button>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="20dp"
+                android:hint="File Dokumen"
+                android:textSize="12sp"></TextView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/round_corner_rectangle_grey_8dp"
+                android:gravity="top"
+                android:padding="4dp"
+                android:textSize="12sp">
+
+                <TextView
+                    android:id="@+id/textChooseImage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""></TextView>
+
+                <Button
+                    android:id="@+id/buttonChooseImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih">
+
+                </Button>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submitKajian"
+                style="@style/loginButton"
+                android:layout_gravity="right"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:gravity="center"
+                android:text="Upload" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>

@@ -17,22 +17,25 @@ import com.bappedamalang.sipelitmotion.profil.ProfilFragment
 import com.bappedamalang.sipelitmotion.search.SearchFragment
 import com.bappedamalang.sipelitmotion.upload.UploadFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.text.TextUtils
 import com.bappedamalang.sipelitmotion.auth.LoginActivity
+import com.bappedamalang.sipelitmotion.interfaces.SearchHome
 import id.flwi.util.ActivityUtil
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.ThreadMode
+import org.greenrobot.eventbus.Subscribe
+import com.bappedamalang.sipelitmotion.interfaces.SuccessAddKajian
+import com.bappedamalang.sipelitmotion.management.MyDocumentFragment
 
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(){
 
     private var bottomNavigationView: BottomNavigationView? = null
     private val homeFragment = HomeFragment()
     private val searchFragment = SearchFragment()
-    private val uploadFragment = UploadFragment()
+    private var uploadFragment = UploadFragment()
     private val profilFragment = ProfilFragment()
+    private val manageFragment = MyDocumentFragment()
 
     private val mOnNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -54,9 +57,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     loadFragment(searchFragment)
                     return@OnNavigationItemSelectedListener true
                 }
-                R.id.navigationMenu -> {
-                    val drawer = findViewById(R.id.drawer_layout) as DrawerLayout
-                    drawer.openDrawer(GravityCompat.START)
+                R.id.myDocument -> {
+                    loadFragment(manageFragment)
                     return@OnNavigationItemSelectedListener true
                 }
             }
@@ -83,9 +85,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawer.addDrawerListener(toggle)
         toggle.syncState()
 
-        val navigationView = findViewById(R.id.nav_view) as NavigationView
-        navigationView.setNavigationItemSelectedListener(this)
-
         bottomNavigationView = findViewById(R.id.navigation)
         bottomNavigationView!!.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         //
@@ -105,29 +104,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
-
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // Handle navigation view item clicks here.
-        val id = item.itemId
-
-        if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_dark_mode) {
-
-
-        }
-
-        val drawer = findViewById(R.id.drawer_layout) as DrawerLayout
-        drawer.closeDrawer(GravityCompat.START)
-        return true
-    }
-
     // method untuk load fragment yang sesuai
     private fun loadFragment(fragment: Fragment?): Boolean {
         if (fragment != null) {
@@ -137,6 +113,27 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             return true
         }
         return false
+    }
+
+    public override fun onStart() {
+        super.onStart()
+        EventBus.getDefault().register(this)
+    }
+
+    public override fun onStop() {
+        super.onStop()
+        EventBus.getDefault().unregister(this)
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onMessageEvent(event: SuccessAddKajian) {
+         uploadFragment = UploadFragment()
+        loadFragment(homeFragment)
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onMessageEvent(event: SearchHome) {
+        loadFragment(searchFragment)
     }
 }
 

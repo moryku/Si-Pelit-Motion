@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.bappedamalang.sipelitmotion.R
 import com.bappedamalang.sipelitmotion.adapter.KajianAdapter
 import com.bappedamalang.sipelitmotion.adapter.KategoryAdapter
+import com.bappedamalang.sipelitmotion.interfaces.SearchHome
+import com.bappedamalang.sipelitmotion.interfaces.SuccessAddKajian
 import com.bappedamalang.sipelitmotion.model.response.ResponseCategory
 import com.bappedamalang.sipelitmotion.model.response.ResponseKajian
 import com.ezyindustries.pos.api.APIService
@@ -23,6 +25,7 @@ import retrofit2.Response
 import java.lang.Exception
 import id.flwi.util.ActivityUtil
 import kotlinx.android.synthetic.main.fragment_home.view.*
+import org.greenrobot.eventbus.EventBus
 
 
 class HomeFragment : Fragment() {
@@ -43,6 +46,9 @@ class HomeFragment : Fragment() {
         getAllProduct()
         categoryRecyclerView()
         getAllCategory()
+        v?.searchText?.setOnClickListener{
+            EventBus.getDefault().post(SearchHome(""));
+        }
         return v
     }
 

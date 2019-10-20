@@ -1,6 +1,7 @@
 package com.bappedamalang.sipelitmotion.adapter
 
 import android.content.Context
+import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +15,8 @@ import kotlinx.android.synthetic.main.item_search_kajian.view.*
 class SearchKajianAdapter (var context: Context): RecyclerView.Adapter<SearchKajianAdapter.PlaceViewHolder>(){
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
-    var data: List<MKajian> = ArrayList()
+    var data: MutableList<MKajian> = ArrayList()
+    var dataOri: List<MKajian> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlaceViewHolder {
         val view = inflater.inflate(R.layout.item_search_kajian, parent, false)
@@ -39,7 +41,23 @@ class SearchKajianAdapter (var context: Context): RecyclerView.Adapter<SearchKaj
 
     internal fun setData(datas: MutableList<MKajian>) {
         this.data = datas
+        this.dataOri = datas
         notifyDataSetChanged()
     }
 
+    fun searchKeyword(keyword: String) {
+        if (TextUtils.isEmpty(keyword)) {
+            data = dataOri.toMutableList()
+        } else {
+            for (i in dataOri) {
+                if (i.judul.contains(keyword) || i.abstrak.contains(keyword) || i.kategori.contains(
+                        keyword
+                    )
+                ) {
+                    data.add(i)
+                }
+            }
+        }
+        notifyDataSetChanged()
+    }
 }

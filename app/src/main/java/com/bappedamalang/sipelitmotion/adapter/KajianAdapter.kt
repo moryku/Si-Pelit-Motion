@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bappedamalang.sipelitmotion.BASE_URL_FILE
+import com.bappedamalang.sipelitmotion.BASE_URL_COVER
 import com.bappedamalang.sipelitmotion.R
 import com.bappedamalang.sipelitmotion.detail.DetailKajianActivity
 import com.bappedamalang.sipelitmotion.model.MKajian
@@ -33,8 +33,9 @@ class KajianAdapter (var context: Context): RecyclerView.Adapter<KajianAdapter.P
         fun setData(kajian: MKajian){
             v.title.text = kajian.judul
             v.jumlah_hal.text = kajian.jumlah_hal.toString() + " Hal"
+            v.categoryText.text = kajian.kategori
             Glide.with(context)
-                .load(BASE_URL_FILE + kajian.image)
+                .load(BASE_URL_COVER + kajian.image)
                 .into(v.image)
             v.master_layout.setOnClickListener {
                 context.startActivity(Intent(context, DetailKajianActivity::class.java).putExtra("data", kajian))

@@ -39,6 +39,10 @@ class LoginActivity: AppCompatActivity() {
         cirLoginButton.setOnClickListener {
             login()
         }
+        registerButton.setOnClickListener {
+            startActivity(Intent(this!!, RegisterActivity::class.java))
+            finish()
+        }
     }
 
     fun login() {
@@ -71,8 +75,9 @@ class LoginActivity: AppCompatActivity() {
                         ActivityUtil.setSharedPreference(this@LoginActivity, EMAIL, user.email)
                         ActivityUtil.setSharedPreference(this@LoginActivity, NAME, user.name)
                         ActivityUtil.setSharedPreference(this@LoginActivity, ADDRESS, user.address)
-                        ActivityUtil.setSharedPreference(this@LoginActivity, TOKEN, user.token)
-                        ActivityUtil.setSharedPreference(this@LoginActivity, TOKEN, user.token)
+                        ActivityUtil.setSharedPreference(this@LoginActivity, INSTITUSI, user.institusi)
+                        ActivityUtil.setSharedPreference(this@LoginActivity, NO_HP, user.phone)
+                        ActivityUtil.setSharedPreference(this@LoginActivity, USER_ID, user.id)
                         startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                         return
                     }

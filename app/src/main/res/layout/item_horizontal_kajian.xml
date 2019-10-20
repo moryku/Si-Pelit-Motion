@@ -3,6 +3,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/master_layout"
     android:orientation="vertical">
 
@@ -49,12 +50,19 @@
                 android:layout_marginBottom="12dp"
                 android:orientation="horizontal">
 
-                <RatingBar
-                    style="@style/Widget.AppCompat.RatingBar.Small"
+                <TextView
+                    android:id="@+id/categoryText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/title"
-                    android:rating="5" />
+                    tools:text="Kajian"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:textSize="14sp"
+                    android:paddingVertical="2dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_corner_rectangle_blue_8dp"
+                     />
 
                 <View
                     android:layout_width="0dp"

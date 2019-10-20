@@ -31,6 +31,7 @@
             android:hint="@string/login_email_hint"
             android:textColor="@color/darkest_text"
             android:inputType="textEmailAddress"
+            android:textSize="15sp"
             android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -43,6 +44,7 @@
             android:id="@+id/editTextPassword"
             style="@style/modifiedEditText"
             android:hint="@string/login_password_hint"
+            android:textSize="15sp"
             android:inputType="textPassword"
             android:textColor="@color/darkest_text"
             android:maxLines="1" />
@@ -53,10 +55,12 @@
         style="@style/loginButton"
         android:layout_gravity="right"
         android:layout_marginTop="@dimen/loginViewsMargin"
+        android:textSize="15sp"
         android:gravity="center"
         android:text="Login" />
 
     <TextView
+        android:id="@+id/registerButton"
         style="@style/parent"
         android:layout_marginTop="@dimen/loginViewsMargin"
         android:text="@string/login_signup_hint"

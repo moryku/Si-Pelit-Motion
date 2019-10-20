@@ -1,6 +1,8 @@
 package com.bappedamalang.sipelitmotion.search
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -18,7 +20,8 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class SearchFragment : Fragment() {
+class SearchFragment : Fragment(), TextWatcher {
+
 
     private var apiService: APIService? = null
     var v: View? = null
@@ -40,6 +43,7 @@ class SearchFragment : Fragment() {
         adapter = SearchKajianAdapter(context!!)
         v?.recyclerView!!.layoutManager = LinearLayoutManager(context!!)
         v?.recyclerView!!.adapter = adapter
+        v?.searchText?.addTextChangedListener(this)
     }
 
     fun getAllProduct() {
@@ -62,4 +66,14 @@ class SearchFragment : Fragment() {
 
         })
     }
+
+    override fun afterTextChanged(s: Editable?) {
+           adapter?.searchKeyword(s.toString())
+            }
+
+    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            }
 }
