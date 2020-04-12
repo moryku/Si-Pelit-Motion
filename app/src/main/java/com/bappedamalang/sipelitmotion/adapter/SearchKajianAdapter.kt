@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bappedamalang.sipelitmotion.BASE_URL_COVER
 import com.bappedamalang.sipelitmotion.BASE_URL_FILE
 import com.bappedamalang.sipelitmotion.R
 import com.bappedamalang.sipelitmotion.model.MKajian
@@ -34,7 +35,7 @@ class SearchKajianAdapter (var context: Context): RecyclerView.Adapter<SearchKaj
             v.title.text = kajian.judul
             v.desc.text = kajian.abstrak
             Glide.with(context)
-                .load(BASE_URL_FILE + kajian.image)
+                .load(BASE_URL_COVER + kajian.image)
                 .into(v.image)
         }
     }
@@ -46,13 +47,15 @@ class SearchKajianAdapter (var context: Context): RecyclerView.Adapter<SearchKaj
     }
 
     fun searchKeyword(keyword: String) {
+        data = ArrayList()
         if (TextUtils.isEmpty(keyword)) {
             data = dataOri.toMutableList()
         } else {
-            for (i in dataOri) {
-                if (i.judul.contains(keyword) || i.abstrak.contains(keyword) || i.kategori.contains(
-                        keyword
-                    )
+            for (a in 0..dataOri.size-1) {
+                var i = dataOri.get(a)
+                if (i.judul.contains(keyword)
+                    || i.abstrak.contains(keyword)
+                    || i.kategori.contains(keyword)
                 ) {
                     data.add(i)
                 }

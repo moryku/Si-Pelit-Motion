@@ -31,7 +31,7 @@ class RegisterActivity : AppCompatActivity() {
             register()
         }
         loginButtn.setOnClickListener {
-            startActivity(Intent(this!!, RegisterActivity::class.java))
+            startActivity(Intent(this!!, LoginActivity::class.java))
             finish()
         }
     }

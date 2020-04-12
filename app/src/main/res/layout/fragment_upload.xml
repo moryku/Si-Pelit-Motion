@@ -148,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
                 android:layout_marginTop="20dp"
-                android:hint="File Dokumen"
+                android:hint="File Cover Gambar"
                 android:textSize="12sp"></TextView>
 
 
